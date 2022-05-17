@@ -2,7 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+class Greeting {
+  greet(): void {
+    console.log("Hello world !!!");
+  }
+}
+var obj = new Greeting();
+console.log(obj.greet());
+
 function App() {
+  var mess:string = "Hello guys !";
+  console.log(mess);
   return (
     <div className="App">
       <header className="App-header">
