@@ -7,7 +7,7 @@ import { PostRequest } from './Components/POST_request';
 function App() {
   return (
     <div>
-        <h3 className="p-3 text-center">React HTTP POST Requests with Fetch</h3>
+        <h3 className="p-3 text-center">React HTTP POST Requests with Fetch API</h3>
         <PostRequest />
     </div>
   );
