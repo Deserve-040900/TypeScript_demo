@@ -27,44 +27,10 @@ function PostRequest() {
         fetchPost();
     }, []);
 
-    const post: any = { listJ };
-
     return (
-        <div>
-            <div className="table-responsive">
-                <table className="table table-bordered">
-                    <tbody>
-                        <tr className="table-primary">
-                            <th>DETAILID</th>
-                            <th>TYPEID</th>
-                            <th>TITLE</th>
-                            <th>TITLECOLOR</th>
-                            <th>CONTENT</th>
-                            <th>CONTENTCOLOR</th>
-                            <th>SHOWBTN</th>
-                            <th>BTNCOLOR</th>
-                            <th>BTNTEXT</th>
-                            <th>BTNLINK</th>
-                            <th>IMGURL</th>
-                            <th>TAG</th>
-                            <th>POSITIONCONTENT</th>
-                            <th>IMGTYPE</th>
-                            <th>LOGOURL</th>
-                            <th>LANGUAGEID</th>
-                            <th>VIDEOURL</th>
-                            <th>ROWEXPAND</th>
-                            <th>ROWLEVEL</th>
-                            <th>CDATE</th>
-                        </tr>
-                        {post.map((p: any) => (
-                            <tr key={p.PARENTID}>
-                                <PostList post={p} />
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <>
+            <PostList post={listJ} />
+        </>
     );
 }
 
