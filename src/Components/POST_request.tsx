@@ -27,7 +27,7 @@ function PostRequest() {
         fetchPost();
     }, []);
 
-    // const post: any = { listJ }
+    const post: any = { listJ };
 
     return (
         <div>
@@ -56,8 +56,11 @@ function PostRequest() {
                             <th>ROWLEVEL</th>
                             <th>CDATE</th>
                         </tr>
-
-                        <PostList post = {listJ} />
+                        {post.map((p: any) => (
+                            <tr key={p.PARENTID}>
+                                <PostList post={p} />
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
