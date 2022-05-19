@@ -27,14 +27,14 @@ function PostRequest() {
         fetchPost();
     }, []);
 
-    const post: any = { listJ }
+    // const post: any = { listJ }
 
     return (
         <div>
-            <div className="w3-responsive">
-                <table className="table grid text-secondary bg-light w3-border-gray">
+            <div className="table-responsive">
+                <table className="table table-bordered">
                     <tbody>
-                        <tr className="text-dark">
+                        <tr className="table-primary">
                             <th>DETAILID</th>
                             <th>TYPEID</th>
                             <th>TITLE</th>
@@ -56,12 +56,8 @@ function PostRequest() {
                             <th>ROWLEVEL</th>
                             <th>CDATE</th>
                         </tr>
-                        {post.map((p: any) => (
-                            <PostList
-                                key={p.PARENTID}
-                                p={p}
-                            />
-                        ))}
+
+                        <PostList post = {listJ} />
                     </tbody>
                 </table>
             </div>
