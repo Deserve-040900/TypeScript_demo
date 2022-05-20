@@ -1,11 +1,13 @@
-.App {
-  text-align: center;
-}
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,500,700);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.42em;
+    color:#A7A1AE;
+    background-color:#1F2739;
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -28,11 +30,11 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */

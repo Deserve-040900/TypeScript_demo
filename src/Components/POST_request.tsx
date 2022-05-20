@@ -7,12 +7,11 @@ function PostRequest() {
     useEffect(() => {
         const data = {
             "LANGUAGEID": "vi-VN",
-            "MA_CTY": "DHS",
-            "PARENTID": "01.04.00"
+            "MA_CTY": "DHS"
         };
 
         async function fetchPost() {
-            fetch('https://api.dhsoft.com.vn/api/HomePage/GetListDetailPage', {
+            fetch('https://api.dhsoft.com.vn/api/HomePage/GetListProductPage', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
