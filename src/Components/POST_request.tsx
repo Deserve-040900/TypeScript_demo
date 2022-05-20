@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PostList from './postList';
+import PostList from './PostList';
 
 function PostRequest() {
     const [listJ, setListJ] = useState([]);
