@@ -27,6 +27,12 @@
     "sourceMap": true,
     "strictNullChecks": true
   },
+  "rules": {
+    "typedef": [
+        true,
+        "call-signature"
+    ]
+  },
   "include": [
     "src"
   ]

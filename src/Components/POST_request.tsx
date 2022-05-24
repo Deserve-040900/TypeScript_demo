@@ -11,11 +11,13 @@ function PostRequest() {
         };
 
         async function fetchPost() {
-            fetch('https://api.dhsoft.com.vn/api/HomePage/GetListProductPage', {
+            const requestURL = 'https://api.dhsoft.com.vn/api/HomePage/GetListProductPage';
+            const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
-            })
+            }
+            fetch(requestURL, requestOptions)
                 .then(response => response.json())
                 .then(res => setListJ(res))
                 .catch((err) => {
@@ -28,6 +30,7 @@ function PostRequest() {
 
     return (
         <>
+            
             <PostList post={listJ} />
         </>
     );

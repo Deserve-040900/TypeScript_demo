@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropStyle from 'prop-types';
 import './PostList.css';
 
@@ -10,12 +10,15 @@ PostList.defaultProps = {
     post: [],
 };
 
-export default function PostList (props: any) {
+function PostList (props: any) {
     const { post } = props;
+    const [searchedVal, setSearchedVal] = useState("");
+
     return (
         <>
+        <label htmlFor='Searching' className="label"> Filter PARENTID <input type='text' placeholder='Search by PARENTID ...' onChange={(e) => setSearchedVal(e.target.value)} /></label>
             <div className="container-fluid">
-                <table className="table table-striped">
+                <table className="table table-striped" id="myTable">
                     <thead className="thead">
                         <tr className="tr bg-dark text-light">
                             {
@@ -26,7 +29,13 @@ export default function PostList (props: any) {
                         </tr>
                     </thead>
                     <tbody className="tbody">
-                        {post.map((p: any) => (
+                        {post.filter((row: any) =>
+                            !searchedVal.length || row.PARENTID
+                            .toString()
+                            .toLowerCase()
+                            .includes(searchedVal.toString().toLowerCase()) 
+                        )  // data.filter.map
+                        .map((p: any) => (
                             <tr className="tr" key={p.PRODUCTID}>
                                 {
                                     Object.values(p).map((value:any, index) =>(
@@ -41,3 +50,5 @@ export default function PostList (props: any) {
         </>
     );
 }
+
+export default PostList;
