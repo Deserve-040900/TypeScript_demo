@@ -1,0 +1,55 @@
+body{
+  background: -webkit-linear-gradient(left, #52d0de, #de65c1);
+  background: linear-gradient(to right, #52d0de, #de65c1);
+  font-family: 'Roboto', sans-serif;
+}
+.container-fluid {
+  padding: 1em;
+  display: flex;
+  overflow: auto;
+  font-size: 15px;
+}
+.label {
+  margin: 0.5em 1em;
+}
+.table {
+  width: 100%;
+  display: block;
+  border-spacing: 0;
+  border: 1px solid black;
+}
+.table .thead tr {
+  border-bottom: none;
+  padding: 0;
+}
+.table .tbody tr:hover {
+  transform: scale(1.0);
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.table .tr:first-child td {
+  border-top: none;
+}
+.table .tr:last-child td {
+  border-bottom: none;
+}
+.table th,
+td {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  position: relative;
+  height: fit-content;
+}
+.table th:last-child,
+.table td:last-child {
+  border-right: 0;
+}
+.th {
+  resize: horizontal;
+  overflow: auto;
+  max-width: 500px;
+  min-width: 50px;
+}
